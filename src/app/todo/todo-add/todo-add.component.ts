@@ -24,7 +24,7 @@ export class TodoAddComponent implements OnInit {
     if ( this.txtInput.invalid ) {
       return;
     } else {
-      const action = new fromTodo.AddTodo( this.txtInput.value );
+      const action = new fromTodo.AddTodoAction( this.txtInput.value );
       this.store.dispatch( action );
       this.txtInput.reset();
     }
