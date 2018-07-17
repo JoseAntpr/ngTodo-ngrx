@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import * as fromFilterActions from '../../filter/filter.actions';
+import * as fromTodoActions from '../todo.actions';
 import { AppState } from '../../app.reducers';
 import { Todo } from '../models/todo.model';
 
@@ -33,6 +34,12 @@ export class TodoFooterComponent implements OnInit {
 
   calculatePending(todos: Todo[]) {
     this.pendientes = todos.filter( todo => !todo.completed ).length;
+  }
+
+  deleteAll() {
+    const action = new fromTodoActions.DeleteAllTodoAction();
+
+    this.store.dispatch(action);
   }
 
 }

@@ -44,6 +44,8 @@ export function todoReducer ( state = initialState, action: fromTodo.actions ): 
             });
         case fromTodo.DELETE_TODO:
             return state.filter( todoDelete => todoDelete.id !== action.id );
+        case fromTodo.DELETE_ALL_TODO:
+            return state.filter( todoDelete => !todoDelete.completed);
         default:
             return state;
     }

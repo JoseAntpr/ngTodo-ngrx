@@ -16,6 +16,7 @@ import { TodosItemComponent } from './todo/todos-item/todos-item.component';
 import { TodoFooterComponent } from './todo/todo-footer/todo-footer.component';
 import { TodoAddComponent } from './todo/todo-add/todo-add.component';
 import { environment } from '../environments/environment';
+import { FilterPipe } from './filter/filter.pipe';
 
 
 
@@ -28,7 +29,8 @@ import { environment } from '../environments/environment';
     TodosListComponent,
     TodosItemComponent,
     TodoFooterComponent,
-    TodoAddComponent
+    TodoAddComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
 <ul class="todo-list">
   <!-- These are here just to show the structure of the list items -->
-  <app-todos-item *ngFor="let todo of todos" [todo]="todo"></app-todos-item>
+  <app-todos-item *ngFor="let todo of todos | filterTodo: filter" [todo]="todo"></app-todos-item>
 </ul>
